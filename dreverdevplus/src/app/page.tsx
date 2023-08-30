@@ -6,14 +6,14 @@ import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
-    <main className="w-screen h-screen flex-grow  snap-y snap-mandatory overflow-auto scroll-smooth">
+    <main className="w-screen h-screen flex-grow snap-y snap-mandatory overflow-auto scroll-smooth">
       <Section>
         <Presentation />
       </Section>
       <Section>
         <About />
       </Section>
-      <Section>
+      <Section isSlider>
         <Projects />
       </Section>
       <Footer />
