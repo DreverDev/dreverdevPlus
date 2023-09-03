@@ -6,7 +6,7 @@ export default function About() {
         { name: "NextJS", img: "nextjs" },
         { name: "HTML5", img: "html5" },
         { name: "CSS3", img: "css3" },
-        { name: "Javascript", img: "javascript" },
+        { name: "AWS", img: "aws" },
     ]
 
     return (
