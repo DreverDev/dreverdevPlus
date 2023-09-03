@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useProject } from "@/hooks/useProject";
 import { ProjectType } from "@/types";
 import ProjectsSlider from "../ProjectsSlider";
+import Section from "../layout/Section";
 
 export default function Projects() {
 
@@ -23,15 +24,15 @@ export default function Projects() {
     }, [])
 
     return (
-        <>
+        <Section isSlider>
+            <div className="block fade-in">
             <h2 className="text-4xl text-blue-500 self-start mt-0 mb-2">PROJECTS SHOWCASE</h2>
-            {projects.length > 0 ? (
-                <div className="block">
+                {projects.length > 0 ? (
                     <ProjectsSlider projects={projects} />
-                </div>
-            ) : (
-                <span>No hay elementos disponibles</span>
-            )}
-        </>
+                ) : (
+                    <span>No hay elementos disponibles</span>
+                )}
+            </div>
+        </Section>
     );
 }
