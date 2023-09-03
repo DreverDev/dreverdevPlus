@@ -37,3 +37,9 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 640px) {
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        position: static;
+    }
+}
