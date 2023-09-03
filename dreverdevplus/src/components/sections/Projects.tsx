@@ -26,7 +26,7 @@ export default function Projects() {
     return (
         <Section isSlider>
             <div className="block">
-            <h2 className="text-4xl text-blue-500 self-start mt-0 mb-2">PROJECTS SHOWCASE</h2>
+            <h2 className="text-3xl text-blue-500 self-start mt-0 mb-2">PROJECTS SHOWCASE</h2>
                 {projects.length > 0 ? (
                     <ProjectsSlider projects={projects} />
                 ) : (

@@ -7,20 +7,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function ProjectSlide({ project }: { project: ProjectType }) {
 
     return (
-        <div className="flex">
-            <div className="w-1/2 px-10">
+        <div className="flex flex-col md:flex-row">
+            <div className="md:w-1/2 md:px-10">
                 <img
                     src={`/images/projects/${project.image}`}
                     alt={project.name}
                     className=""
                 />
             </div>
-            <div className="w-1/2 flex flex-col justify-center text-right px-10">
+            <div className="md:w-1/2 flex flex-col justify-center md:px-10 md:text-right">
                 <div className="flex flex-col gap-4">
                     <header>
                         <h2 className="font-bold">{project.name}</h2>
                     </header>
-                    <div className="bg-blue-500 p-4 rounded">
+                    <div className="bg-blue-500 px-4 h-72 md:h-auto rounded text-[14px] md:text-[16px] flex items-center">
                         <p>{project.desc}</p>
                     </div>
                     <footer className="flex gap-4 justify-end">
