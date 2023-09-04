@@ -10,7 +10,7 @@ export default function About() {
     ]
 
     return (
-        <Section>
+        <Section bgClass={'bg-gradient-2'}>
             <p className="text-xl flex flex-wrap md:w-[85%] fade-in">I&apos;m a web developer skilled in JavaScript, experienced with Node.js and Next.js. I excel at solving complex challenges and value both teamwork and autonomy. My inherent curiosity keeps me evolving in the dynamic world of web development.</p>
 
             <div className="flex w-full justify-between md:px-24">

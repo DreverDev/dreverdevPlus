@@ -18,5 +18,5 @@ export function fadeInService(): void {
     }, observerOptions)
 
     const $elements = document.querySelectorAll('.fade-in');
-    $elements.forEach((element) => observer.observe(element))
+    $elements.forEach((element) => observer.observe(element));
 }

@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Background gradients */
+
+.bg-gradient {
+    transition: opacity 0.1s ease-in-out 0.1s;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bg-gradient-1 {
+    background-image: linear-gradient(0deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.bg-gradient-2 {
+    background-image: linear-gradient(30deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.bg-gradient-3 {
+    background-image: linear-gradient(60deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.bg-gradient-4 {
+    background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.bg-gradient-1.bg-gradient-visible,
+.bg-gradient-2.bg-gradient-visible,
+.bg-gradient-3.bg-gradient-visible,
+.bg-gradient-4.bg-gradient-visible {
+    transition-delay: 0s;
+    opacity: 1;
+}
+
 /* Color Text animations */
 
 .violet {

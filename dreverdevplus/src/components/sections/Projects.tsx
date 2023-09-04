@@ -24,7 +24,7 @@ export default function Projects() {
     }, [])
 
     return (
-        <Section isSlider>
+        <Section isSlider bgClass={'bg-gradient-3'}>
             <div className="block py-8">
                 <h2 className="text-2xl text-blue-500 self-start mt-0 mb-2">PROJECTS SHOWCASE</h2>
                 {projects.length > 0 ? (
