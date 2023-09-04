@@ -8,11 +8,11 @@ export default function ProjectSlide({ project }: { project: ProjectType }) {
 
     return (
         <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2 md:px-10">
+            <div className="md:w-1/2 md:px-10 flex justify-center">
                 <img
                     src={`/images/projects/${project.image}`}
                     alt={project.name}
-                    className=""
+                    className="h-36"
                 />
             </div>
             <div className="md:w-1/2 flex flex-col justify-center md:px-10 md:text-right">
@@ -20,7 +20,7 @@ export default function ProjectSlide({ project }: { project: ProjectType }) {
                     <header>
                         <h2 className="font-bold">{project.name}</h2>
                     </header>
-                    <div className="bg-blue-500 px-4 h-72 md:h-auto rounded text-[14px] md:text-[16px] flex items-center">
+                    <div className="bg-blue-500 px-4 h-60 md:h-auto rounded text-[14px] md:text-[16px] flex items-center">
                         <p>{project.desc}</p>
                     </div>
                     <footer className="flex gap-4 justify-end">
