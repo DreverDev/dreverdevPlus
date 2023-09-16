@@ -4,7 +4,7 @@ export function fadeInService(): void {
     const observerOptions = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.9,
+        threshold: 0.3,
     };
 
     const observer = new IntersectionObserver((entries) => {

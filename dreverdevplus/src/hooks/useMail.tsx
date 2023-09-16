@@ -1,10 +1,11 @@
 export const useMail = () => {
-    const sendMail = async (email: string, where: string, why: string) => {
+    const sendMail = async (name: string,email: string, message: string) => {
       try {
         const payload = {
+          name: name,
           email: email,
-          where: where,
-          why: why,
+          message: message,
+          date: `${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`,
         };
   
         const response = await fetch('/api/sendMail', {

@@ -9,12 +9,13 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
 
   try {
-    const {email, where, why} = await request.json();
+    const {name, email, message, date} = await request.json();
 
     const emailComponent: React.ReactElement = React.createElement(EmailTemplate, {
+      name: name,
       email: email,
-      where: where,
-      why: why
+      message: message,
+      date: date
     });
 
     const data = await resend.emails.send({

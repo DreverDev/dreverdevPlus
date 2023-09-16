@@ -1,12 +1,13 @@
-export default function Section({ children, isSlider, bgClass }: { children: React.ReactNode, isSlider?: Boolean, bgClass?: String }) {
+export default function Section({ children, isSlider }: { children: React.ReactNode, isSlider?: Boolean }) {
     return (
         <section
-            className={`landing-section h-screen w-full overflow-hidden relative
-            gap-4 py-8 md:py-10 px-6 ${isSlider ? 'md:px-20' :'md:px-52'} max-w-full
-            snap-center flex flex-col justify-center gap-10 z-20`}
-            data-bgclass={bgClass}
+            className={`landing-section h-screen w-full md:overflow-hidden relative
+            items-center
+            snap-center flex flex-col justify-center z-20`}
         >
-            {children}
+            <div className="max-w-5xl w-full flex flex-col justify-center gap:2 md:gap-5">
+                {children}
+            </div>
         </section>
     )
 }

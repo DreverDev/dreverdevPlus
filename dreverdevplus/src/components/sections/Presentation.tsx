@@ -1,14 +1,15 @@
-import ColorText from "../ColorText";
 import Section from "../layout/Section";
 
 export default function Presentation() {
 
-    
+
     return (
-        <Section bgClass={'bg-gradient-1'}>
-            <h2 className="text-5xl md:text-8xl text-blue-500 flex flex-wrap fade-in">Dídac Reverte.</h2>
-            <span className="fade-in" style={{'--delay': '0.5s'} as React.CSSProperties}><ColorText /></span>
-            <p className='text-lg md:max-w-[70%] my-4 fade-in' style={{'--delay': '1s'} as React.CSSProperties}>I&apos;m a software developer based near Barcelona, Spain, specialized in building extraordinary web solutions.</p>
+        <Section>
+            <h1 className="text-4xl md:text-7xl font-semibold flex flex-wrap fade-in">Dídac Reverte.</h1>
+            <h2 className="fade-in text-4xl md:text-7xl font-semibold" style={{ '--delay': '0.5s' } as React.CSSProperties}>
+                <span className="textGradient">I'm an innovative fullstack developer</span>
+            </h2>
+            <p className='text-lg md:max-w-[50%] my-4 text-subtext fade-in' style={{'--delay': '1s'} as React.CSSProperties}>I&apos;m a software developer based near Barcelona, Spain, specialized in building extraordinary web solutions from scratch.</p>
         </Section>
     );
 }

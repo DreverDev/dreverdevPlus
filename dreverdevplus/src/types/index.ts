@@ -49,3 +49,7 @@ export type ProjectType = {
   github: string,
   blog: string,
 }
+
+export type UtilsContextType = {
+  isMobile: boolean;
+}

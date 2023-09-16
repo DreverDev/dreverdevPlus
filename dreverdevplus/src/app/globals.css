@@ -2,57 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Background gradients */
-
-.bg-gradient {
-    transition: opacity 0.1s ease-in-out 0.1s;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-}
-
-.bg-gradient-1 {
-    background-image: linear-gradient(0deg, #e0c3fc 0%, #8ec5fc 100%);
-}
-.bg-gradient-2 {
-    background-image: linear-gradient(30deg, #e0c3fc 0%, #8ec5fc 100%);
-}
-.bg-gradient-3 {
-    background-image: linear-gradient(60deg, #e0c3fc 0%, #8ec5fc 100%);
-}
-.bg-gradient-4 {
-    background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
-}
-
-.bg-gradient-1.bg-gradient-visible,
-.bg-gradient-2.bg-gradient-visible,
-.bg-gradient-3.bg-gradient-visible,
-.bg-gradient-4.bg-gradient-visible {
-    transition-delay: 0s;
-    opacity: 1;
-}
-
-/* Color Text animations */
-
-.violet {
-    color: #6d28d9;
-}
-
-.green {
-    color: #22c55e;
-}
-
-.amber {
-    color: #fcd34d;
-}
-
-.red {
-    color: #ef4444;
-}
-
 /* Fade in animation */
 
 .fade-in {
@@ -68,6 +17,26 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.textGradient {
+    background: linear-gradient(45deg, #9340FF, #5E00D9, #9340FF);
+    background-size: 200% 200%;
+    animation: gradientFading 10s linear infinite;
+    
+    /* Estas propiedades hacen que el fondo se aplique al texto */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; /* Para soporte en navegadores basados en Webkit como Safari */
+}
+
+@keyframes gradientFading {
+    from {
+        background-position: 300% 0%;
+    }
+    to {
+        background-position: -100% 100%;
     }
 }
 
