@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={`font-sans z-0 bg-background text-white`}>
         <UtilsProvider>
           <Header />
-          {children}
+          <main className="w-screen h-screen flex-grow md:snap-y md:snap-mandatory overflow-auto scroll-smooth px-10 md:px-[200px]">
+            {children}
+          </main>
         </UtilsProvider>
       </body>
     </html>

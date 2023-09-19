@@ -6,7 +6,7 @@ export const getAll = async (): Promise<ProjectType[] | Error> => {
     await connection();
     try {
         return await Project.find({ priority: { $gt: 0 }})
-            .sort('priority');
+            .sort('-priority');
     } catch (error) {
         console.log(error)
         return error as Error;
