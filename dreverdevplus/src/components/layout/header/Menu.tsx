@@ -32,7 +32,7 @@ export default function Menu() {
     return (
         <div className="flex text-sm [&>li>a]:font-medium [&>li>a]:text-current [&>li>a]:transition-colors [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 relative">
             <span className="z-10" ref={buttonRef} onClick={toggleOpen}><Hamburger toggled={isOpen} /></span>
-            <nav ref={menuRef} className={`transform origin-top-right ${isOpen ? 'scale-100' : 'scale-0'} transition-transform duration-300 absolute top-0 right-0 w-64 bg-gray-800 backdrop-blur-sm text-white rounded`}>
+            <nav ref={menuRef} className={`transform origin-top-right ${isOpen ? 'scale-100' : 'scale-0'} transition-transform duration-300 absolute top-0 right-0 w-64 bg-[#1C2335] backdrop-blur-sm text-white rounded`}>
                 <ul className="flex flex-col py-5">
                     {siteConfig.navItems.map((item) => (
                         <Link key={item.href} className="text-xl" href={item.href}>

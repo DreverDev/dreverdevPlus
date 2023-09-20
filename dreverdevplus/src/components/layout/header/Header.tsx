@@ -9,9 +9,9 @@ export default function Header() {
             <div className="flex flex-grow basis-0 [&>a]:font-medium">
                 <Link href="/" className="flex items-center hover:text-subtext transition-colors duration-300">
                     <span>
-                        <LogoIcon size={40}/>
+                        <LogoIcon size={40} />
                     </span>
-                    <span>&lt;DreverDev/&gt;</span>
+                    <span>DreverDev</span>
                 </Link>
             </div>
             <Menu />
