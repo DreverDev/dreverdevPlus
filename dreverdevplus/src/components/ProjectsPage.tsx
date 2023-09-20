@@ -24,7 +24,7 @@ export default function ProjectsPage() {
         <>
             {
                 projects.length > 0 ? (
-                    <section className="gap-5 w-full grid grid-cols-1 md:grid-cols-3">
+                    <section className="gap-5 w-full grid grid-cols-1 md:grid-cols-4">
                         {
                             projects.map((project) => (
                                 <Project key={project._id} project={project} />
