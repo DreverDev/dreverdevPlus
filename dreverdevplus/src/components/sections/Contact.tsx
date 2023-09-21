@@ -28,10 +28,13 @@ export default function Contact() {
         message: ''
     })
     const { sendMail } = useMail();
+    const [sent, setSent] = useState(false);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         sendMail(values.name, values.email, values.message);
+        resetForm();
+        setSent(true);
     }
 
     return (
@@ -46,6 +49,18 @@ export default function Contact() {
                 </div>
                 <div className="w-full md:grid md:grid-cols-[1fr_1fr] gap-12">
                     <form className="w-full flex flex-col gap-5 px-1 justify-center" onSubmit={handleSubmit}>
+                        {
+                            sent && (
+                                <span className="w-full px-4 py-2 border-2 border-title rounded-xl
+                                text-title font-bold bg-[#C194FE]/20
+                                "
+                                >
+                                    Message sent succesfully
+                                </span>
+                            )
+                        }
+
+
                         <CustomInput name="name" placeholder="Your name:" value={values.name} onChange={handleChange} />
                         <CustomInput name="email" placeholder="Your email:" value={values.email} onChange={handleChange} />
                         <CustomInput name="message" placeholder="Your message:" value={values.message} onChange={handleChange} />
