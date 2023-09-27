@@ -11,7 +11,7 @@ export default function Project({ project }: { project: ProjectType }) {
         <article className="bg-[#1C2335] rounded relative flex flex-col group">
             <div className="py-3 px-2 w-full">
                 <div className="overflow-hidden inline-block">
-                    <img className=" h-full rounded transition-transform duration-300 ease-in-out group-hover:scale-110" src={`/images/projects/${project.image}`} alt={project.name} />
+                    <img className=" w-full rounded transition-transform duration-300 ease-in-out group-hover:scale-110" src={`/images/projects/${project.image}`} alt={project.name} />
                 </div>
             </div>
             <div className="flex flex-col mb-14">
